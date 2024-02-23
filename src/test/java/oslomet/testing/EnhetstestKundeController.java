@@ -1,7 +1,6 @@
 package oslomet.testing;
 
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -93,7 +92,7 @@ public class EnhetstestKundeController {
         String resultat = kundeController.lagreKunde(enKunde);
 
         //Assert
-        Assertions.assertEquals("OK", resultat);
+        assertEquals("OK", resultat);
     }
 
     @Test
@@ -110,7 +109,7 @@ public class EnhetstestKundeController {
         String resultat = kundeController.lagreKunde(enKunde);
 
         //Assert
-        Assertions.assertEquals("Ikke logget inn", resultat);
+        assertEquals("Ikke logget inn", resultat);
     }
 
     @Test
@@ -129,7 +128,7 @@ public class EnhetstestKundeController {
         String resultat = kundeController.endre(enKunde);
 
         //Assert
-        Assertions.assertEquals("OK", resultat);
+        assertEquals("OK", resultat);
     }
 
     @Test
@@ -146,7 +145,7 @@ public class EnhetstestKundeController {
         String resultat = kundeController.endre(enKunde);
 
         //Assert
-        Assertions.assertEquals("Ikke logget inn", resultat);
+        assertEquals("Ikke logget inn", resultat);
     }
 
     @Test
@@ -165,7 +164,7 @@ public class EnhetstestKundeController {
         String resultat = kundeController.slett(enKunde.getPersonnummer());
 
         //Assert
-        Assertions.assertEquals("OK", resultat);
+        assertEquals("OK", resultat);
     }
 
     @Test
@@ -182,6 +181,6 @@ public class EnhetstestKundeController {
         String resultat = kundeController.slett(enKunde.getPersonnummer());
 
         //Assert
-        Assertions.assertEquals("Ikke logget inn", resultat);
+        assertEquals("Ikke logget inn", resultat);
     }
 }
