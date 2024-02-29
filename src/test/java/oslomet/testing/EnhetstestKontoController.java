@@ -54,7 +54,6 @@ public class EnhetstestKontoController {
 
         //assert
         assertEquals(kontoer, resultat);
-
     }
 
     @Test
@@ -66,8 +65,6 @@ public class EnhetstestKontoController {
 
         //assert
         assertNull(resulat);
-
-
     }
 
     Konto testKonto = new Konto("123456789", "123", 1000.0, "Sparekonto", "NOK", new ArrayList<>());
@@ -92,7 +89,6 @@ public class EnhetstestKontoController {
 
         // Assert
         assertEquals("Ikke innlogget", resultat);
-
     }
 
     @Test
@@ -130,8 +126,6 @@ public class EnhetstestKontoController {
         String resultat = adminKontoController.slettKonto(testKonto.getKontonummer());
         assertEquals("Ikke innlogget", resultat);
     }
-
-
 }
 
 
