@@ -62,14 +62,4 @@ public class Sikkerhet {
         }
         return null;
     }
-
-    // det under er brukt i integrasjonstesten
-    // behøver ikke å  enhetstestes da dette ikke er en del av applikasjonen
-    @Autowired
-    private DataSource dataSource;
-
-    @GetMapping("/initDB")
-    public String initDB(){
-        return rep.initDB(dataSource);
-    }
 }
