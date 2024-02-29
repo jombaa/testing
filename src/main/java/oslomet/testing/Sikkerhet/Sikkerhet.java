@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import oslomet.testing.DAL.BankRepository;
 
 import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
 
 @RestController
 public class Sikkerhet {
@@ -60,5 +61,15 @@ public class Sikkerhet {
             return (String) session.getAttribute("Innlogget");
         }
         return null;
+    }
+
+    // det under er brukt i integrasjonstesten
+    // behøver ikke å  enhetstestes da dette ikke er en del av applikasjonen
+    @Autowired
+    private DataSource dataSource;
+
+    @GetMapping("/initDB")
+    public String initDB(){
+        return rep.initDB(dataSource);
     }
 }
